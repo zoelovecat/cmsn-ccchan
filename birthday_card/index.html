@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Đợi chút nha~</title>
+    <script src="./unlock.js"></script>
+    <script>
+      redirectIfUnlocked();
+    </script>
+    <link rel="stylesheet" href="gate.css" />
+  </head>
+  <body class="gate">
+    <div class="gate__bg" aria-hidden="true"></div>
+    <main class="gate__card">
+      <p class="gate__headline">Bắt quả tang mở trước!</p>
+      <p class="gate__scold">
+        Á à, bảo mở đúng ngày mới được mở mà
+      </p>
+      <p class="gate__wait" aria-live="polite">
+        <span class="gate__wait-line">Đợi đi, còn</span>
+        <span class="gate__time" id="cd-text">...</span>
+        <span class="gate__wait-line">nữa thôi</span>
+      </p>
+    </main>
+    <script src="./gate.js"></script>
+  </body>
+</html>

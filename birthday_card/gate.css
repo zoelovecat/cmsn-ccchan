@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&family=Sriracha&display=swap");
+
+:root {
+  --color-pink: #feecea;
+  --color-white: #fff;
+  --color-black: #333;
+  --color-text-pink: #ff7882;
+  --color-heart: #f61f1f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.gate {
+  position: relative;
+  min-height: 100%;
+  min-height: 100dvh;
+  font-family: "Sriracha", cursive;
+  font-size: 16px;
+  color: var(--color-black);
+  background: linear-gradient(var(--color-pink), var(--color-pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(20px, env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    max(20px, env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+}
+
+.gate__bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(255, 255, 255, 1) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 1) 75%,
+      rgba(255, 255, 255, 1) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(255, 255, 255, 1) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(255, 255, 255, 1) 75%,
+      rgba(255, 255, 255, 1) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 56px 56px;
+  opacity: 0.85;
+  z-index: 0;
+}
+
+.gate__card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  padding: 28px 20px 24px;
+  border: 3px solid var(--color-black);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+}
+
+.gate__headline {
+  font-family: "Titan One", sans-serif;
+  font-size: clamp(1.35rem, 6.5vw, 1.65rem);
+  line-height: 1.35;
+  color: var(--color-text-pink);
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.gate__scold {
+  font-family: "Sriracha", cursive;
+  font-size: clamp(0.95rem, 4.2vw, 1.05rem);
+  line-height: 1.55;
+  color: var(--color-black);
+  margin-bottom: 22px;
+  padding: 0 4px;
+}
+
+.gate__wait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gate__wait-line {
+  font-family: "Sriracha", cursive;
+  font-size: clamp(1rem, 4.5vw, 1.1rem);
+  line-height: 1.4;
+}
+
+.gate__time {
+  display: block;
+  width: 100%;
+  padding: 14px 12px;
+  font-family: "Sriracha", cursive;
+  font-size: clamp(1rem, 4.8vw, 1.15rem);
+  line-height: 1.5;
+  color: var(--color-heart);
+  background: var(--color-pink);
+  border-radius: 16px;
+  border: 2px solid var(--color-text-pink);
+  overflow-wrap: break-word;
+  white-space: pre-line;
+}
+
+@media screen and (max-width: 380px) {
+  .gate__card {
+    padding: 24px 16px 20px;
+    border-radius: 16px;
+  }
+
+  .gate__time {
+    font-size: 0.95rem;
+    padding: 12px 10px;
+  }
+}
+
+@media screen and (min-width: 659px) {
+  .gate__card {
+    max-width: 400px;
+    padding: 32px 28px 28px;
+  }
+
+  .gate__bg {
+    background-size: 80px 80px;
+  }
+}
