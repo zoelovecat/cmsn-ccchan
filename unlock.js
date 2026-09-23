@@ -4,7 +4,7 @@ var UNLOCK_CONFIG = {
   cardPage: "card.html",
   gatePage: "index.html",
   /** true = bỏ gate để sửa thiệp. Đặt lại false trước khi đưa cho người nhận. */
-  preview: true,
+  preview: false,
 };
 
 function getUnlockTimestamp() {
