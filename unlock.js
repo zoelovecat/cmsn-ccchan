@@ -3,6 +3,8 @@ var UNLOCK_CONFIG = {
   unlockAt: "2026-10-06T00:00:00+09:00",
   cardPage: "card.html",
   gatePage: "index.html",
+  /** true = bỏ gate để sửa thiệp. Đặt lại false trước khi đưa cho người nhận. */
+  preview: true,
 };
 
 function getUnlockTimestamp() {
@@ -10,6 +12,7 @@ function getUnlockTimestamp() {
 }
 
 function isUnlocked() {
+  if (UNLOCK_CONFIG.preview) return true;
   return Date.now() >= getUnlockTimestamp();
 }
 

@@ -1,12 +1,12 @@
 // Chỉnh nội dung thiệp tại đây
 const CARD = {
   pageTitle: "Happy Birthday",
-  name: "Babii",
-  profileImage: "./images/r5.png",
-  dateOfBirth: "5 April 1996",
-  letterTitle: "To you",
+  name: "Thuỷ Tiên",
+  profileImage: "./images/ccchan.jpg",
+  dateOfBirth: "2003年10月6日",
+  letterTitle: "Gửi CC Chan",
   message:
-    "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕",
+    "Chúc gái iu bước sang tuổi 23 thật vững vàng và xinh đẹp. Chúc em có ngày sinh nhật thật vui vẻ, bước sang tuổi mới cười nhiều hơn, bớt suy nghĩ tiêu cực đi nhaaa. Chúc em tất cả trừ vất vả.\n\niu em",
 };
 
 document.addEventListener("DOMContentLoaded", function () {
